@@ -27,12 +27,10 @@
 
 
 # The Game:
-- 🕹️ **Steam Site:** https://store.steampowered.com/app/1371580/Myth_of_Empires/
-- 📁 **Homepage:** https://www.mythofempires.com/
+- 🕹️ **Steam Site:** https://store.steampowered.com/app/290080/Life_is_Feudal_Your_Own/
 
 # Requirements:
 - 🖥️ **WindowsGSM** >= 1.21.0
-- 📟 The **RAM usage is currently high**, approximately around 10-12 GB, with no active players. Please prepare accordingly.
 
 # Server Settings:
 > [!IMPORTANT]
