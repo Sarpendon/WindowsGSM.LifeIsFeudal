@@ -43,19 +43,17 @@ namespace WindowsGSM.Plugins
         // - Game server default values
         public string Port = "2456";
         public string QueryPort = "2457";
-        public string Defaultmap = "MapSeed";
-        public string Maxplayers = "4";
-        public string Additional = "-password \"123456\" -savedir \".\\save-data\" -crossplay -saveinterval 1800 -backups 4 -backupshort 7200 -backuplong 43200";
+        public string Defaultmap = "world ID 1";
+        public string Maxplayers = "64";
+        public string Additional = "";
 
         public async Task<Process> Start()
         {
             string shipExePath = Functions.ServerPath.GetServersServerFiles(_serverData.ServerID, StartPath);
 
             // Prepare start parameter
-            string param = $"-nographics -batchmode -public 1"; 
-            param += string.IsNullOrWhiteSpace(_serverData.ServerName) ? string.Empty : $" -name \"{_serverData.ServerName}\"";
-            param += string.IsNullOrWhiteSpace(_serverData.ServerPort) ? string.Empty : $" -port {_serverData.ServerPort}"; 
-            param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" -world \"{_serverData.ServerMap}\"";
+            string param = $""; 
+            param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" {_serverData.ServerMap}";
             param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" {_serverData.ServerParam}";
 
             // Prepare Process
